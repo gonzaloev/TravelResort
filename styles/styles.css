@@ -71,11 +71,12 @@ ul.show{
 
 
 #bg__video{
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    object-fit: contain;
 }
 
 #bg__overlay{
@@ -104,109 +105,44 @@ ul.show{
 }
 
 main {
-    flex: 1;
+    /* flex: 1;
 
     display: flex;
     justify-content: space-evenly;
     align-items: stretch;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    position: relative;
+    top: 800px;
+    background-color: white;
+    height: 150vh;
 }
+
+.box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  main{
+    background: teal;
+    height: 150vh;
+ 
+}
+
 
 /* extra */
 
-
-article {
-    background-color: rgba(15, 155, 50,.09);
-
-    padding: 15px;
-    border-radius: 15px;
-
-    margin: 15px;
-
-    transition: 0.3s all ease-in-out;
-    display: flex;
-    flex-direction: column;
-
-}
-
-article .contenido {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-article:hover {
-    background-color: lightskyblue;
-    color: rgb(50,50,50);
-}
-
-article:hover h2 {
-    text-decoration: underline;
-}
-
-article .imagenes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    flex: 1;
-
-    flex-wrap: wrap;
-}
-
-article .imagenes img {
-    width: 30%;
-    border: 5px solid wheat;
-    border-radius: 500px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-article p {
-    padding: 25px;
-    background-color: rgba(0, 0, 0, 0.3);
-    
-    border-radius: 15px;
-    flex: 1;
-}
-
-article p:first-child {
-    margin-bottom: 5px;
-}
-
-article p:last-child{
-    margin-top: 5px;
-}
-
-article p a {
-    color: black;
-}
-
-#Articulo1 {
-    flex: 8;
-}
-
-#Articulo2 {
-    flex: 2;
-}
-
-#Articulo3 {
-    flex: 2;
-}
-
-main{
-        position: absolute;
-        left: 0;
-        top: 900px;
-}
+.fadein { position:relative; height:300px; width:300px; outline: 1px solid blue; }
+.fadein img { position:absolute; top:0; transition:opacity 1s; opacity:1; }
+.fadein img.is-hidden { opacity:0; }
 
 /*   */
 
 body{
     font-family: 'Roboto', sans-serif;
     color: white;
-
+    height: 300vh;
     display: flex;
     flex-direction: column;
 }
@@ -264,67 +200,77 @@ body{
         font-size: 25px;
         padding-left: 35px;
     }
+    body{
+        height: 250vh;
+    }
     
     footer{
         padding:25px;
     }
-    
+
+    main{
+        background: teal;
+        height: 200vh;
+     
+    }
+
+
+    .fadein {
+        left: 1%;
+        width: 320px;
+        height: 600px;
+        background-color:antiquewhite;
+        border-radius: 10px;
+    }
+
+    .fadein img{
+        padding: 10px;
+        left: 3%;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        position: absolute;
+        top: 46%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: auto;
+      }
+
+     .box div{
+        padding-top: 30px;
+        margin: 10px; 
+     }
+
+     .box h2{
+         text-align: center;
+     }
+
+     .box img{
+         
+        border-radius: 50%;
+        display: table-cell;
+        height: 300px;
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+     }
+            
 }
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    main{
-        position: absolute;
 
-        top: 700px;
-    }
 footer{
     clear: both;
     position: relative;
     height: 20px;
-    top: 1700px;
+    top: 800px;
 }
    /* navbar */
-  /* 
-   .menu{
-    height: 65px;
-}
-.btn_menu{
-    display: inline-flex;
-}
-.menu_items{
-    position: fixed;
-    width: 100vw;
-    height: calc(100% - 65%);
-    background-color: #414141;
-    top: -100vh;
-    text-align: center;
-    transition: all .4s;
-    flex-direction: column;
-}
-
-.memu_items li{
-    margin: 30px 0 0 0;
-    line-height: 30px;
-}
-
-.menu_items li:hover{
-    background: none;
-}
-
-.menu_items li a{
-    font-size: 20px;
-    color: #fff;
-    font-weight: bold;
-}
-.menu_items li a:hover{
-    columns: #e9183b;
-}
-.logo{
-    font-size: 25px;
-    padding-left: 35px;
-    position: fix;
-} */
+ 
 
    /* navbar */
 
